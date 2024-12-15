@@ -1,0 +1,14 @@
+.gramp::after{
+    content: "";
+    position: absolute;
+    width: 5px; /* Or 100% for full width */
+    height:100vh;
+    background-color: red;
+    top: 0%;
+    left: 50%; 
+}
+@media(max-width : 768px){
+    .gramp::after{
+        display: hidden;
+    }
+}

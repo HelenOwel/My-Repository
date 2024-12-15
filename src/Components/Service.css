@@ -1,0 +1,66 @@
+/* .apple:hover ~ .arp {
+    background-color: red;
+    transform-origin: left;
+    animation: koro 1s linear forwards
+}
+@keyframes koro{
+    0%{ background-color: #fff;}
+    100%{background-color: red;}
+} */
+.apple:hover ~ .arp .ment {
+    background-color: red;
+    transition: transform 0.5s ease-in-out;
+    transform: scaleX(1);
+  }
+  .arp {
+    position: relative;
+    overflow: hidden; /* Ensure content stays within bounds */
+    color: initial;
+  }
+  
+  .arp:hover {
+    color: #fff;
+  }
+  
+  .arp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1; 
+  }
+  
+  .arp:hover::before {
+    transform: scaleX(1); 
+  }
+  
+  
+  .arp {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ment{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    transform: scaleX(0); /* Initially hidden (scaled to 0) */
+    transform-origin: left; /* Animation starts from the left */
+    z-index: -1; /* Keep the background behind the text */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .arp p {
+    position: relative;
+    z-index: 1; /* Ensure text stays above the background */
+  }
+  

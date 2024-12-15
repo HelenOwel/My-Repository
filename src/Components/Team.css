@@ -1,0 +1,33 @@
+.teams{
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+.teams::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    transform: scaleX(0);
+    z-index: -1;
+    
+}
+.teams:hover::after{
+    background-color: rgb(160, 6, 6);
+    transform: scaleX(1);
+   
+   
+}
+.teams:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.teams img:hover{
+  transform: scale(0.9);
+  transition: transform 0.5s ease-in-out;
+}
